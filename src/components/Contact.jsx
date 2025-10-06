@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaPhone } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -31,12 +31,30 @@ export default function Contact() {
             West Bengal, India
           </p>
           <p className="text-gray-400 text-sm">
-            <FaEnvelope className="inline-block mr-2 text-cyan-400" />
+            <FaPhone className="inline-block mr-2 text-cyan-400"/>
             <a
-              href="mailto:sayan.roy@example.com"
+              href="callto:9775939480"
               className="hover:underline text-cyan-400"
             >
-              sayan.roy@example.com
+              9775939480
+            </a>
+          </p>
+          <p className="text-gray-400 text-sm">
+            <FaEnvelope className="inline-block mr-2 text-cyan-400" />
+            <a
+              href="mailto:sayanroy2802@gmail.com"
+              className="hover:underline text-cyan-400"
+            >
+              sayanroy2802@gmail.com
+            </a>
+          </p>
+          <p className="text-gray-400 text-sm">
+            <FaEnvelope className="inline-block mr-2 text-cyan-400" />
+            <a
+              href="mailto:sayan.roy@iitg.ac.in"
+              className="hover:underline text-cyan-400"
+            >
+              sayan.roy@iitg.ac.in
             </a>
           </p>
         </motion.div>
@@ -51,21 +69,21 @@ export default function Contact() {
           <h3 className="text-xl font-semibold text-cyan-300">Connect</h3>
           <div className="flex flex-col space-y-2 text-sm">
             <a
-              href="https://github.com/your-github"
+              href="https://github.com/Sayanir7"
               target="_blank"
               className="flex items-center gap-2 hover:text-cyan-400 transition-text duration-500"
             >
               <FaGithub /> GitHub
             </a>
             <a
-              href="https://linkedin.com/in/your-linkedin"
+              href="https://linkedin.com/in/sayanir7"
               target="_blank"
               className="flex items-center gap-2 hover:text-cyan-400 transition-text duration-500"
             >
               <FaLinkedin /> LinkedIn
             </a>
             <a
-              href="https://instagram.com/your-instagram"
+              href="https://instagram.com/among_hills"
               target="_blank"
               className="flex items-center gap-2 hover:text-cyan-400 transition-text duration-500"
             >

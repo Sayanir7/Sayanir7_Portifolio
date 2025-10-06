@@ -6,6 +6,15 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "CF Submitter", 
+    description:"an vscode + chrome extension to show, run test cases, and submit all questions of a contest directly to codeforces, all without leaving vscode.",
+    tech: ["TypeScript","vsce yo"],
+
+    repo:"https://github.com/Sayanir7/codesubmit",
+    live:"https://marketplace.visualstudio.com/items?itemName=DevXSayan.cf-submitter",
+
+  },
+  {
     title: "College Help Bot",
     description:
       "AI chatbot for campus queries. Trained ML model with FastAPI backend, React frontend.",
@@ -20,8 +29,8 @@ const projects = [
       "AI-powered tool to generate websites from natural language using GrapesJS editor and OpenAI API.",
     tech: ["React", "GrapesJS", "OpenAI API"],
     
-    repo: "https://github.com/your-repo/text-to-site",
-    live: "https://your-live-link.com/text-to-site",
+    repo: "https://github.com/Sayanir7/webcraft",
+    live: "https://webcraft-sayanir7.vercel.app/",
   },
   {
     title: "Resume Builder SWC",
@@ -29,72 +38,44 @@ const projects = [
       "Code free resume generation platform for IITG students, feature include enabling live preview and downloadable PDF resumes.",
     tech: ["React", "Node", "Express", "Docker", "Latex"],
     
-    repo: "https://github.com/your-repo/text-to-site",
-    live: "https://your-live-link.com/text-to-site",
+    repo: "https://github.com/swciitg/resume-builder",
+    live: "https://swc.iitg.ac.in/resume-builder/",
   },
   {
-    title: "Geo Attendance App",
+    title: "Attendance Tracker App",
     description:
       "Flutter app to automate attendance based on geolocation and secure backend storage.",
     tech: ["Flutter", "MongoDB", "Node.js"],
     
-    repo: "https://github.com/your-repo/attendance-app",
-    live: "https://your-live-link.com/attendance-app",
+    repo: "https://github.com/Sayanir7/Attendance_tracker",
   },
-  {
-    title: "LTspice Clone",
-    description:
-      "Web-based circuit solver using Cut-set and Tie-set matrix analysis with automatic branch and node detection.",
-    tech: ["React", "JavaScript", "Linear Algebra"],
+  // {
+  //   title: "AI Cricket Commentator",
+  //   description:
+  //     "AI model to generate ball-by-ball commentary by analyzing video frames and predicting shots.",
+  //   tech: ["Python", "OpenCV", "TensorFlow"],
     
-    repo: "https://github.com/your-repo/ltspice-clone",
-    live: "https://your-live-link.com/ltspice-clone",
-  },
-  {
-    title: "Disease Prediction System",
-    description:
-      "Web app that predicts diseases based on symptoms using a custom ML model, built with Node.js backend.",
-    tech: ["Node.js", "Express", "Machine Learning"],
+  //   repo: "https://github.com/your-repo/ai-cricket-commentator",
+  //   live: "https://your-live-link.com/ai-cricket-commentator",
+  // },
+  // {
+  //   title: "Library Seat Monitor",
+  //   description:
+  //     "CCTV-based seat detection system to monitor empty seats in a library using computer vision.",
+  //   tech: ["Python", "OpenCV", "YOLO"],
     
-    repo: "https://github.com/your-repo/disease-predictor",
-    live: "https://your-live-link.com/disease-predictor",
-  },
-  {
-    title: "React Portfolio Website",
-    description:
-      "Animated portfolio site to showcase projects, skills, and experience using React and Framer Motion.",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
-    
-    repo: "https://github.com/your-repo/portfolio-site",
-    live: "https://your-live-link.com/portfolio",
-  },
-  {
-    title: "AI Cricket Commentator",
-    description:
-      "AI model to generate ball-by-ball commentary by analyzing video frames and predicting shots.",
-    tech: ["Python", "OpenCV", "TensorFlow"],
-    
-    repo: "https://github.com/your-repo/ai-cricket-commentator",
-    live: "https://your-live-link.com/ai-cricket-commentator",
-  },
-  {
-    title: "Library Seat Monitor",
-    description:
-      "CCTV-based seat detection system to monitor empty seats in a library using computer vision.",
-    tech: ["Python", "OpenCV", "YOLO"],
-    
-    repo: "https://github.com/your-repo/library-seat-monitor",
-    live: "https://your-live-link.com/library-seat-monitor",
-  },
+  //   repo: "https://github.com/your-repo/library-seat-monitor",
+  //   live: "https://your-live-link.com/library-seat-monitor",
+  // },
 
   {
     title: "Chat App",
     description:
       "Realtime chat application with stylish UI, user authentication, and private messaging.",
-    tech: ["React", "Firebase", "Tailwind CSS"],
+    tech: ["React", "WEBRTC", "Tailwind CSS"],
     
-    repo: "https://github.com/your-repo/chat-app",
-    live: "https://your-live-link.com/chat-app",
+    repo: "https://github.com/Sayanir7/chatting-webrtc",
+    live: "https://chatting-webrtc.vercel.app/",
   },
   {
     title: "Movie Sync Platform",

@@ -1,10 +1,18 @@
 import React from "react";
 import { MapPin } from "lucide-react";
-import logo from "../assets/me-face.JPG";
+import logo from "../assets/me-face-bla.jpg";
 import { motion } from "framer-motion";
 import iitg from "../assets/iitg_main2.jpg";
 
 export default function Home() {
+  const handleClick = () => {
+    const label = "contact";
+    const section = document.getElementById(label.toLowerCase());
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div className="flex flex-col-reverse md:flex-row min-h-screen w-full bg-[radial-gradient(ellipse_at_top,_#0f0f0f_0%,_black_100%)] text-white overflow-hidden">
 
@@ -30,7 +38,7 @@ export default function Home() {
           <img
             src={logo}
             alt="icon"
-            className="w-12 h-12 rounded-full inline mx-2 border-2 border-cyan-400 shadow-cyan-500/30 shadow"
+            className="w-20 h-20 rounded-full inline mx-2 border-2 border-cyan-400 shadow-cyan-500/30 shadow"
           />
           Developer by day,
         </motion.h1>
@@ -60,10 +68,13 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4"
         >
+          <a href="/" draggable >
           <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-semibold py-3 px-6 rounded-xl shadow-lg transition-all duration-300 hover:scale-105">
             Download CV
-          </button>
-          <button className="bg-transparent border border-cyan-400 hover:bg-cyan-400 hover:text-black text-cyan-300 font-medium py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105">
+          </button></a>
+          <button 
+          onClick={handleClick}
+          className="bg-transparent border border-cyan-400 hover:bg-cyan-400 hover:text-black text-cyan-300 font-medium py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105">
             Get in Touch
           </button>
         </motion.div>
