@@ -6,20 +6,28 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "CF Submitter", 
-    description:"an vscode + chrome extension to show, run test cases, and submit all questions of a contest directly to codeforces, all without leaving vscode.",
-    tech: ["TypeScript","vsce yo"],
+    title: "Digital Library Token",
+    description:
+      "An initiative by SWC-IITG to digitize the pysical token system at central library",
+    tech: ["Node.js", "React", "PostgreSql", "Docker"],
 
-    repo:"https://github.com/Sayanir7/codesubmit",
-    live:"https://marketplace.visualstudio.com/items?itemName=DevXSayan.cf-submitter",
+    repo: "https://github.com/swciitg/Library-Token-2025",
+  },
+  {
+    title: "CF Submitter",
+    description:
+      "an vscode + chrome extension to show, run test cases, and submit all questions of a contest directly to codeforces, all without leaving vscode.",
+    tech: ["TypeScript", "vsce yo"],
 
+    repo: "https://github.com/Sayanir7/codesubmit",
+    live: "https://marketplace.visualstudio.com/items?itemName=DevXSayan.cf-submitter",
   },
   {
     title: "College Help Bot",
     description:
       "AI chatbot for campus queries. Trained ML model with FastAPI backend, React frontend.",
     tech: ["React", "FastAPI", "Python", "scikit-learn", "spaCy"],
-    
+
     repo: "https://github.com/Sayanir7/College-Help-Bot",
     live: "https://iitg-chatbot-seven.vercel.app/",
   },
@@ -28,7 +36,7 @@ const projects = [
     description:
       "AI-powered tool to generate websites from natural language using GrapesJS editor and OpenAI API.",
     tech: ["React", "GrapesJS", "OpenAI API"],
-    
+
     repo: "https://github.com/Sayanir7/webcraft",
     live: "https://webcraft-sayanir7.vercel.app/",
   },
@@ -37,24 +45,17 @@ const projects = [
     description:
       "Code free resume generation platform for IITG students, feature include enabling live preview and downloadable PDF resumes.",
     tech: ["React", "Node", "Express", "Docker", "Latex"],
-    
+
     repo: "https://github.com/swciitg/resume-builder",
     live: "https://swc.iitg.ac.in/resume-builder/",
   },
-  {
-    title: "Attendance Tracker App",
-    description:
-      "Flutter app to automate attendance based on geolocation and secure backend storage.",
-    tech: ["Flutter", "MongoDB", "Node.js"],
-    
-    repo: "https://github.com/Sayanir7/Attendance_tracker",
-  },
+
   // {
   //   title: "AI Cricket Commentator",
   //   description:
   //     "AI model to generate ball-by-ball commentary by analyzing video frames and predicting shots.",
   //   tech: ["Python", "OpenCV", "TensorFlow"],
-    
+
   //   repo: "https://github.com/your-repo/ai-cricket-commentator",
   //   live: "https://your-live-link.com/ai-cricket-commentator",
   // },
@@ -63,7 +64,7 @@ const projects = [
   //   description:
   //     "CCTV-based seat detection system to monitor empty seats in a library using computer vision.",
   //   tech: ["Python", "OpenCV", "YOLO"],
-    
+
   //   repo: "https://github.com/your-repo/library-seat-monitor",
   //   live: "https://your-live-link.com/library-seat-monitor",
   // },
@@ -71,21 +72,37 @@ const projects = [
   {
     title: "Chat App",
     description:
-      "Realtime chat application with stylish UI, user authentication, and private messaging.",
-    tech: ["React", "WEBRTC", "Tailwind CSS"],
-    
+      "Realtime chat application with end-to-end encryption, and private messaging with media sharing and video calling ",
+    tech: ["React", "WEBRTC", "Socker.io", "Tailwind CSS"],
+
     repo: "https://github.com/Sayanir7/chatting-webrtc",
     live: "https://chatting-webrtc.vercel.app/",
   },
+  // {
+  //   title: "Attendance Tracker App",
+  //   description:
+  //     "Flutter app to automate attendance based on geolocation and secure backend storage.",
+  //   tech: ["Flutter", "MongoDB", "Node.js"],
+
+  //   repo: "https://github.com/Sayanir7/Attendance_tracker",
+  // },
   {
-    title: "Movie Sync Platform",
+    title: "DearIARY",
     description:
-      "Platform to watch movies/shows in sync with others while chatting live.",
-    tech: ["React", "Socket.IO", "Node.js"],
-    
-    repo: "https://github.com/your-repo/movie-sync",
-    live: "https://your-live-link.com/movie-sync",
+      "Personal diary app with location and timestamp, using local storage to store the memories, and cloud storage for backup.",
+    tech: ["Flutter", "MongoDB", "Node.js"],
+
+    repo: "https://github.com/Sayanir7/Attendance_tracker",
   },
+  // {
+  //   title: "Movie Sync Platform",
+  //   description:
+  //     "Platform to watch movies/shows in sync with others while chatting live.",
+  //   tech: ["React", "Socket.IO", "Node.js"],
+
+  //   repo: "https://github.com/your-repo/movie-sync",
+  //   live: "https://your-live-link.com/movie-sync",
+  // },
 ];
 
 export default function ProjectShowcase() {
@@ -135,7 +152,7 @@ export default function ProjectShowcase() {
             className="relative group h-[300px] overflow-hidden rounded-2xl border border-white/10 shadow-md hover:shadow-cyan-500/20 transition-shadow duration-300"
           >
             {/* Background Video */}
-            <video
+            {/* <video
               src={project.video}
               className="absolute h-full w-full object-cover top-0 left-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-0"
               loop
@@ -146,7 +163,18 @@ export default function ProjectShowcase() {
                 e.target.pause();
                 e.target.currentTime = 0;
               }}
-            />
+            /> */}
+
+            {/* Background Iframe for Live Webpage */}
+            {project.live && project.live.trim() !== "" && (
+              <iframe
+                src={project.live}
+                className="absolute top-0 left-0 w-full h-full object-cover opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-0 pointer-events-none"
+                allowFullScreen
+                sandbox="allow-scripts allow-same-origin" // Adjust sandbox as needed for security
+                style={{ border: "none" }}
+              />
+            )}
 
             {/* Content Overlay */}
             <div className="relative z-10 p-6 h-full flex flex-col justify-between">
